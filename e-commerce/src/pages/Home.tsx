@@ -16,7 +16,7 @@ export default function Home() {
     const [data, setData] = useState([])
     useEffect(() => {
         try {
-            axios.post(`${BACKEND_URL}/AMZ/categories/Laptop/products?top=10&minPrice=1&maxPrice=10000`, {
+            axios.get(`${BACKEND_URL}/AMZ/categories/Laptop/products?top=10&minPrice=1&maxPrice=10000`, {
                 headers: {
                     'Authorization': `Bearer ${ACCESS_TOKEN}`
                 }
